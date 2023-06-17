@@ -1,4 +1,6 @@
+import MainLayout from "@/components/MainLayout";
 import "./globals.css";
+import MenuContextProvider from "@/context/MenuContext";
 
 export const metadata = {
   title: "Medisell App",
@@ -13,7 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MenuContextProvider>
+          <MainLayout>{children}</MainLayout>
+        </MenuContextProvider>
+      </body>
     </html>
   );
 }
