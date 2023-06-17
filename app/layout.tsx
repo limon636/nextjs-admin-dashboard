@@ -3,9 +3,8 @@ import "./globals.css";
 import MenuContextProvider from "@/context/MenuContext";
 
 export const metadata = {
-  title: "Medisell App",
-  description:
-    "Medisell app with most popular medical e-commerce in the world. IN_SHA_ALLAH",
+  title: "Dashboard App",
+  description: "Admin Dashboard app",
 };
 
 export default function RootLayout({
