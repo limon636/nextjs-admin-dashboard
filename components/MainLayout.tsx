@@ -5,7 +5,7 @@ import Link from "next/link";
 import MainHeader from "./MainHeader";
 import { AiOutlineHome } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
-import { SiHelpscout } from "react-icons/si";
+import { SiHelpscout, SiSinglestore } from "react-icons/si";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaAngleRight, FaCheckDouble, FaCheck } from "react-icons/fa";
 
@@ -16,7 +16,7 @@ const MainLayout = ({ children }: any) => {
       <MainHeader />
       <div className="flex justify-start items-start">
         <aside
-          className={`bg-white rounded-lg overflow-hidden transition-all duration-100 ${
+          className={`bg-white min-h-screen overflow-hidden transition-all duration-100 -mt-4 ${
             open ? "w-60 p-4" : "w-0"
           } lg:w-60 lg:p-4`}>
           <ul>
@@ -29,10 +29,18 @@ const MainLayout = ({ children }: any) => {
               <div className="flex-1">Project</div>
               <FaAngleRight />
             </li>
-            <li className="flex justify-start items-center rounded-lg space-x-2 p-2 hover:bg-blue-400 hover:text-blue-800">
-              <FaCheck />
-              <div className="flex-1">Singular</div>
-              <FaAngleRight />
+            <li className="flex flex-col justify-start items-center rounded-lg space-x-2 p-2 hover:bg-blue-400 hover:text-blue-800">
+              <div className="w-full flex flex-row justify-start items-center gap-2">
+                <FaCheck />
+                <div className="flex-1">Singular</div>
+                <FaAngleRight />
+              </div>
+              <ul className="ml-8 mt-4">
+                <li className="flex justify-center items-center gap-2">
+                  <SiSinglestore />
+                  <Link href="/single/store">Single Store</Link>
+                </li>
+              </ul>
             </li>
             <li className="flex justify-start items-center rounded-lg space-x-2 p-2 hover:bg-blue-400 hover:text-blue-800">
               <FaCheckDouble />
